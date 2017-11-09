@@ -1,8 +1,13 @@
 # Interview-questions
-The interview question I met  
-我做过的面试题  
+  
+1.我做过的面试题  
+2.面试难度总共为5星  
+3.基本为python、web方面
 ---
 1.寒武纪科技  
+面试难度：2星
+***
+面试题：
 * 另类乘法,123*45=1*4+1*5+2*4+2*5+3*4+3*5=54  
 ```python
 a = '123'
