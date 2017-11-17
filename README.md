@@ -59,7 +59,26 @@ print(len(a))
 ```
 * python实现快排
 ```python
+def partiton(li, a, b):
+    x = li[b]
+    i = a
+    for j in range(a,b): 
+        if li[j] < x:
+            li[i], li[j] = li[j], li[i]
+            i += 1
+    li[i], li[b] = li[b], li[i]
+    return i
 
+def quickSort(li, a, b):
+    if a >= b:
+        return
+    i = partiton(li, a, b)
+    quickSort(li, a, i - 1)
+    quickSort(li, i + 1, b)
+
+li = [5, 4, 6, 3, 2, 1]
+quickSort(li, 0, len(li) - 1)
+print (li)
 
 
 ```
@@ -87,3 +106,62 @@ java中接口和抽象类的区别
 ---
 评价：一共有两轮面试，都是技术面试。问的比较深入，比如http协议，数据库运行原理。总体难度和正式找工作差不多
 。
+***
+---
+4.上海数策软件  
+面试岗位：爬虫工程师(实习)  
+一面难度：2星  
+二面难度：4星  
+笔试难度：3星
+---
+面试内容：  
+range和xrange区别  
+logging模块的使用  
+常见的Exception  
+写出三条git命令  
+如何查看函数运行时间  
+copy和deecopy的区别  
+正则表达式match和searc的区别  
+如何写单元测试  
+一千万条url去重  
+三台服务器进行千万级爬虫并发，如何执行  
+什么是pep8  
+http协议  
+   
+笔试：  
+列表的交集、差集、并集、对称差集
+```python
+listA = [1, 2, 3, 4, 5]
+listB = [3, 4, 5, 6, 7]
+#交集的方法
+intersectionA=[i for i in listA if i in listB]
+print(intersectionA)
+intersectionB=list(set(listA).intersection(set(listB)))
+print(intersectionB)
+intersectionC=list(set(listA)&set(listB))
+print(intersectionC)
+
+#并集的方法
+unionA=list(set(listA)|set(listB))
+print(unionA)
+unionB=list(set(listA).union(listB))
+print(unionB)
+
+#差集的方法
+differenceA=[i for i in  listB if i not in listA]
+print(differenceA)
+differenceB=list(set(listB)-set(listA))
+print(differenceB)
+differenceC=list(set(listB).difference(listA))
+print(differenceC)
+
+#对称差集的方法
+diffA=list(set(listA)^set(listB))
+print(diffA)
+diffB=list(set(listA).symmetric_difference(listB))
+print(diffB)
+
+```
+---
+评价：前前后后三轮面试，最后一轮面试有点牵强，需要有千万级分布式爬虫经验。公司还是不错，不过面试水平一般。
+***
