@@ -1,4 +1,6 @@
 # Interview-questions  
+
+
  
 ***  
 1.我做过的笔试题和一些面试经历  
@@ -134,7 +136,7 @@ logging模块的使用
 写出三条git命令  
 如何查看函数运行时间  
 copy和deecopy的区别  
-正则表达式match和searc的区别  
+正则表达式match和search的区别  
 如何写单元测试  
 一千万条url去重  
 三台服务器进行千万级爬虫并发，如何执行  
@@ -180,3 +182,100 @@ print(diffB)
 评价：前前后后三轮面试，最后一轮面试有点牵强，需要有千万级分布式爬虫经验。公司还是不错，不过面试水平一般。
 
 ---
+***
+5.成都善读数据
+
+
+
+----------
+面试内容：
+pep8
+赋值,浅拷贝,深拷贝
+线程和进程
+类方法
+装饰器
+liunx
+git命令
+2.7和3.6
+logging,线程安全?
+with,实现
+Pythonic语法
+爬虫的反爬
+硬连接,软连接
+tcp/ip/http
+ip池
+计算密集/iO密集
+range和xrange
+
+
+----------
+笔试：
+```
+def foo(a, b=[]):
+    for i in range(a):
+        b.append(i ** 2)
+    print(b)
+
+
+if __name__ == '__main__':
+    foo(3)
+    foo(2, [1, 2, 3])
+    foo(3)
+```
+    
+
+
+----------
+6.成都微银合创
+
+
+----------
+面试内容：
+无技术面试
+
+
+----------
+笔试：
+1.输入一个字母字符串，统计出字符串每个字母的个数，按照字母的ASCII码从大到小排序。以字典形式输出。
+```
+s = input()
+d = {}
+for i in s:
+    d[i] = s.count(i)
+sorted(d)
+print(d)
+```
+2.输入一个数字字符串，每个数字*2后输出，如果*2后大于9，则十位变成#。写出编码函数，和解码函数。
+```
+def encode_num(s):
+    encode_result = ''
+    for i in s:
+        temp = int(i) * 2
+        if temp > 9:
+            temp = str(temp).replace('1', '#')
+        encode_result += str(temp)
+    # print(encode_result)
+    return encode_result
+
+
+def decode_num(encode_result):
+    decode_result = ''
+    for i in range(len(encode_result)):
+        if encode_result[i] == '#':
+            decode_result += str((int(encode_result[i + 1]) + 10) // 2)
+        if encode_result[i].isalnum() and encode_result[i - 1] != '#':
+            decode_result += str(int(encode_result[i]) // 2)
+    #print(decode_result)
+    return decode_result
+
+
+if __name__ == '__main__':
+    s = input()
+    r1 = encode_num(s)
+    r2 = decode_num(r1)
+    print(r1)
+    print(r2)
+
+
+```
+
