@@ -189,23 +189,23 @@ print(diffB)
 
 ----------
 面试内容：
-pep8
-赋值,浅拷贝,深拷贝
-线程和进程
-类方法
-装饰器
-liunx
-git命令
-2.7和3.6
-logging,线程安全?
-with,实现
-Pythonic语法
-爬虫的反爬
-硬连接,软连接
-tcp/ip/http
-ip池
-计算密集/iO密集
-range和xrange
+pep8  
+赋值,浅拷贝,深拷贝  
+线程和进程  
+类方法  
+装饰器  
+liunx  
+git命令  
+2.7和3.6  
+logging,线程安全?  
+with,实现  
+Pythonic语法  
+爬虫的反爬  
+硬连接,软连接  
+tcp/ip/http  
+ip池  
+计算密集/iO密集  
+range和xrange  
 
 
 ----------
